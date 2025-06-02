@@ -1,4 +1,4 @@
-package com.homepiter.commons.dto;
+package com.homepiter.commons.dto.Commonmodule;
 
 import lombok.Builder;
 
@@ -30,7 +30,7 @@ public class ApiRespone <T>{
                 .build();
     }
 
-    /*api respone false */
+    /*api respone failure */
     public static <T> ApiRespone<T> failure(String message) {
         return ApiRespone.<T>builder()
                 .success(false)
