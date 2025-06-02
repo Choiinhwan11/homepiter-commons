@@ -1,4 +1,4 @@
-package com.homepiter.commons.dto;
+package com.homepiter.commons.enums;
 
 public enum UserGender {
     male, female, unknown;

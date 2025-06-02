@@ -1,4 +1,4 @@
-package com.homepiter.commons.dto.user;
+package com.homepiter.commons.enums;
 
 public enum RBAC {
     USER,BUSINESS,ADMIN
