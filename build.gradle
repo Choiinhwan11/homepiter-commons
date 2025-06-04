@@ -18,20 +18,15 @@ repositories {
 }
 
 dependencies {
-    // ✅ Spring Boot (실행용 포함)
     implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web' // ✅ 추가
 
-    // ✅ JSON 직렬화/역직렬화
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
-
-    // ✅ Bean Validation (예: @NotBlank)
     implementation 'jakarta.validation:jakarta.validation-api:3.0.2'
 
-    // ✅ Lombok
     compileOnly 'org.projectlombok:lombok:1.18.30'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
 
-    // ✅ 테스트
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'

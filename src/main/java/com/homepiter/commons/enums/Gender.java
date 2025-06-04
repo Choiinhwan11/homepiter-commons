@@ -3,7 +3,7 @@ package com.homepiter.commons.enums;
 public enum Gender {
     male, female, unknown;
 
-    // 네이버 API 응답 값을 UserGender Enum으로 변환
+
     public static Gender fromNaverValue(String value) {
         if ("M".equalsIgnoreCase(value)) {
             return male;
