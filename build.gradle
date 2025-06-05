@@ -1,56 +1,32 @@
 plugins {
-    id 'java'
-    id 'org.springframework.boot' version '3.1.4'
+    id 'java-library'
+    id 'org.springframework.boot' version '3.2.0'
     id 'io.spring.dependency-management' version '1.1.4'
-    id 'maven-publish'
 }
 
 group = 'com.homepiter'
 version = '1.0.0'
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
-}
+sourceCompatibility = '17'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
-    implementation 'org.springframework.boot:spring-boot-starter-web' // ✅ 추가
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
 
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
-    implementation 'jakarta.validation:jakarta.validation-api:3.0.2'
+    implementation 'mysql:mysql-connector-java:8.0.33'
+
+    implementation project(':HomePiter_Coommons')
 
     compileOnly 'org.projectlombok:lombok:1.18.30'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
 }
 
-dependencyManagement {
-    imports {
-        mavenBom "org.springframework.boot:spring-boot-dependencies:3.1.4"
-    }
-}
-
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            from components.java
-            groupId = 'com.homepiter'
-            artifactId = 'commons'
-            version = '1.0.0'
-        }
-    }
-
-    repositories {
-        maven {
-            url = uri("${rootProject.buildDir}/repo")
-        }
-    }
+tasks.named('test') {
+    useJUnitPlatform()
 }

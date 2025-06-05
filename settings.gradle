@@ -1,2 +1,3 @@
 rootProject.name = 'homepiter'
-include 'HomePiter_Coommons'
+includeBuild('../HomePiter_Admin')
+includeBuild('../HomePiter_Coommons')
