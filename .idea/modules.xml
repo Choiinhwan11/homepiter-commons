@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/homepiter.main.iml" filepath="$PROJECT_DIR$/.idea/modules/homepiter.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.homepiter.commons.homepiter.HomePiter_Coommons.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.homepiter.commons.homepiter.HomePiter_Coommons.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1622408833/com.homepiter.homepiter.HomePiter_Admin.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1622408833/com.homepiter.homepiter.HomePiter_Admin.main.iml" />
     </modules>
   </component>
 </project>
